@@ -2,15 +2,14 @@ import { createClient } from 'npm:@supabase/supabase-js@2'
 import { JWT } from 'npm:google-auth-library@9'
 
 // Hardcoded Supabase URL and Service Key (replace with actual values)
-const SUPABASE_URL = "https://fmtzufgmbciovdxflkqm.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZtdHp1ZmdtYmNpb3ZkeGZsa3FtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNDE4MzU2MCwiZXhwIjoyMDQ5NzU5NTYwfQ.ZHuLemZsLLfLVZSL07_a72JH7PXyE1fDwHReuoRVTOk";
-
+const SUPABASE_URL = "YOUR_SUPABASE_URL";
+const SUPABASE_KEY = "YOUR_SUPABASE_SERVICE_ROLE_KEY";
 // Hardcoded Firebase Server Key and Service Account Credentials (replace with actual values)
-const FCM_SERVER_KEY = "BKogQdg74L6HNSGLUnU34dPxE30pCmaNtVd5n4EdUpF8sGhLPkFz2pvRj0tVCrM2rH-rHsyALgGbgAhmkL-bvgQ";
+const FCM_SERVER_KEY = "YOUR_FCM_SERVER_KEY";
 const SERVICE_ACCOUNT = {
-  project_id: "sample-35132", // replace with your project id
-  client_email: "firebase-adminsdk-fbsvc@sample-35132.iam.gserviceaccount.com",
-  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCtsPc7dMOoExc2\nxFDC2kmvEjh5uwZNSMIC5E7yiUe4ICZBvXtscdYMpA0pzOp0TQj3EhTtwJKYCVk4\n0bnMQWBpjGsL0GRIO7QEG8EsO8cVLHWOB86ggZ+BAIkywnmTeDyL9TnRkIGeXQmu\n/xUe/sB6vJvxq0x6HtrMDc+QQzKE3iXq2N3iQRMU6GbwbI/bTIW0kselHWIhRxpj\nm94NMD5z9f2LNHmz0Y4QDQPzKm7JnfS72aB4naVH4FAUyWLVwuPVTtjJ440TgqPB\nwqmRGZm6vgvieV0nTeXiVgViJ5XEBfH22zH8NhznxtSHz7U1F85u+7J33k6x0ib+\noBio2/K9AgMBAAECggEABcx+tJF1ZsscX0u2lorLIvkswYOo9jOTpp0QtbA3oMIS\nBOfakwhJ6Sog9mBNA4z+26DS6g0f18uYGvmFhng4S83QVRikAHVd0TVMAboNL3vI\ngPFpyJoLRTdLXVJ41J+TBekuAP0eFrdsd1c00VAYBQD/A9aAOyOEkoNzhpF3wk/K\nRnJYg5p5nUIrroYW1Z6CiMXARiVyKXK6mM1xwbYosONaksmC5z5nyhHRTpr3c8hF\nDSQdfq3L5HjNMEY1G6U7f6BxX1eldsRsz9jXIZXq1FM5195on2LNYYbivv2/hXuA\nMx9nAt3n2iuppLTXlB++UTz/kg+w2kmwr1ivji9lAQKBgQDYqw3uJYSwB/gBVfTu\nL0SJAfO2xmrOpS9PafZssQjnOOL7X1W/nDKYNKNcZf0YgYytEoFMJLupTC7+Ntas\nJlJMXX6uHx9vs4wQ0pyR/A/KBmq3k1LxoHjNm9E/ZvOJ0J56Wz1hjbTWAGEOrQX2\ngofrvP3wr/QiCZPWpMG/xhBAUQKBgQDNOLMwj+zqzciBmkKWeVRBHFuM52NyYrdg\nytc4XKGtdKJIHzlSkwWRLg/euhLjTE/lNwPHmTsSpm8i8L0y9V34tohx1EyttOtk\nGgMcckh5y/QR9UNhBUL8n+B4ilsQuIy2A4+GOJOt20k/Bn1tJrUKXG0MTdnr1zby\nKQkQehW8rQKBgQDKMb8bOan8uEMJxBSBXlz/2nF8ZOfxlhdzbbhIsGFVnjG8Ubhs\nyrAweBbnOEob33HPZZCB5Vm3YOAN3lExb8WnfCynA2ZL0Gtqm5D/bxGw/5IBZJun\n35A8mCeKmmG1f5kVKCY87ogOmWX50x/YbvG23bTBMwKJ7RQo37HrbENoMQKBgHkg\n0FMHgFUO5RvqCwd50Ysky7ydDouDTK1qzCFOO3d/8hETrOfaM1z/jQpvVZqnfjjS\ngf6bqMxXRB2hbmrXfIHCa0KUhjW5JX7OA6wUoEaTZRn8Y6quSl2FmB5Nu3ZhF1yP\nOXWFi1UAq3jxwbJdOFpHN24dvVSAkMPaCKmbBZ15AoGBAMzuFqMz4/aDa/cE+OBr\n2++p7tk40SeWrpLbtKUYfSTi0jNr9wOa4u3hnrNe4WrH8ZUJg6XdsHL6LV6eljio\n7CeOGLaY+we8Kf7dTkFSX8PbrwXFLEMAZFQx6V33zfwVrRV3+lqyB85hqDzClC7w\nnkdvwZOX3oq+7iaZDRDntYwL\n-----END PRIVATE KEY-----\n" // replace with your private key
+  project_id: "YOUR_PROJECT_ID", // replace with your project id
+  client_email: "YOUR_FIREBASE_CLIENT_EMAIL",
+  private_key: "YOUR_PRIVATE_KEY" // replace with your private key
 };
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
