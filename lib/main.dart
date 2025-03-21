@@ -31,13 +31,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   // Replace with your Edge function URL
-  final String edgeFunctionUrl = "https://fmtzufgmbciovdxflkqm.supabase.co/functions/v1/sendNotification"; // Replace with actual edge function URL
+  final String edgeFunctionUrl = "YOUR_FUNCTION_URL"; // Replace with actual edge function URL
 
   // Example device type
   final String deviceType = "mobile";  // Replace with actual device type (e.g., "mobile")
 
   // Replace with your actual Authorization Bearer token
-  final String authorizationToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZtdHp1ZmdtYmNpb3ZkeGZsa3FtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNDE4MzU2MCwiZXhwIjoyMDQ5NzU5NTYwfQ.ZHuLemZsLLfLVZSL07_a72JH7PXyE1fDwHReuoRVTOk"; // Replace with actual bearer token
+  final String authorizationToken = "YOUR_API_KEY"; // Replace with actual bearer token
 
   // Function to invoke the Edge function (e.g., send notification)
   Future<void> _invokeEdgeFunction() async {
